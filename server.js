@@ -37,6 +37,13 @@ res.render('home.hbs',{
     welcomeMessage: 'Welcome'
 })
 });
+app.get('/', (req, res) => {
+    res.render('home.hbs',{
+        pageTitle:'Home page',
+        currentYear : new Date().getFullYear(),
+        welcomeMessage: 'Welcome'
+    })
+    });
 
 app.get('/about', (req, res) => {
    res.render('about.hbs',{
